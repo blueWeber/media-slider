@@ -1,0 +1,30 @@
+[
+  {
+    "type": "video",
+    "src": "/media/sky.mp4"
+  },
+  {
+    "type": "image",
+    "src": "/media/slide_image_1.jpg"
+  },
+  {
+    "type": "image",
+    "src": "/media/slide_image_2.jpg"
+  },
+  {
+    "type": "image",
+    "src": "/media/slide_image_3.jpg"
+  },
+  {
+    "type": "video",
+    "src": "/media/sky.mp4"
+  },
+  {
+    "type": "image",
+    "src": "/media/slide_image_4.jpg"
+  },
+  {
+    "type": "image",
+    "src": "/media/slide_image_4.jpg"
+  }
+]

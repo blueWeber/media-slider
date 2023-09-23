@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Media (Image & Video) Slider</title>
+
+  <!-- <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script> -->
+
+  <!-- <script src="./js/script-old.js" type="module" defer></script> -->
+
+  <script src="./js/script.js" type="module" defer></script>
+
+  <link rel="stylesheet" href="./style.css" />
+  <style>
+    :root {
+      --width: 500px;
+      --height: 300px;
+    }
+
+    html,
+    body {
+      width: 100%;
+      height: 100%;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+    }
+
+    body>div {
+      width: var(--width);
+    }
+
+    .media-slider-here {
+      width: var(--width);
+      height: var(--height);
+      background: #ccc;
+    }
+
+    .media-slider-here+div {
+      font-size: 24px;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <div>
+    <div class="media-slider-here-0 media-slider-here"></div>
+    <div>Media Slider Container 0</div>
+  </div>
+
+  <div>
+    <div class="media-slider-here-1 media-slider-here"></div>
+    <div>Media Slider Container 1</div>
+  </div>
+
+  <div>
+    <div class="media-slider-here-2 media-slider-here"></div>
+    <div>Media Slider Container 2</div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,161 @@
+:root {
+  --slide-indicator-color: rgb(0, 89, 255);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  overflow-y: scroll;
+  font-size: 10px;
+}
+
+@media only screen and (max-width: 395px) {
+  html {
+    font-size: 8px;
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+
+  /* 스크롤바 감추기 - 스크롤은 되도록*/
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+
+ul {
+  list-style: none;
+}
+
+/*  */
+.media-slider {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.slide-meta {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+
+  background: rgba(0, 0, 0, 0.3);
+
+  width: 300px;
+  padding: 20px 0;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.slide-meta .slide-progress {
+  margin: 0 auto;
+  width: 20rem;
+  height: 2px;
+  background: white;
+}
+
+.slide-progress-box {
+  position: relative;
+  overflow: hidden;
+}
+
+.slide-progress-bar {
+  position: absolute;
+  left: 0;
+  background: var(--slide-indicator-color) !important;
+}
+
+.slide-indicators {
+  display: flex;
+  justify-content: center;
+}
+
+.slide-indicators li {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  background: white;
+  cursor: pointer;
+}
+
+.slide-indicators li:not(:last-child) {
+  margin-right: 10px;
+}
+
+.slide-indicators li.slide-indicator-active {
+  background: var(--slide-indicator-color);
+}
+
+.slide-controller {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+.btn-slide-controller {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  margin-right: 1rem;
+  background: none;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  user-select: none;
+  cursor: pointer;
+}
+
+.btn-slide-controller:last-child {
+  margin-right: 0;
+}
+
+.btn-slide-controller > img {
+  width: 50%;
+  height: 50%;
+  object-fit: contain;
+}
+
+.media-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.media-container video,
+.media-container img {
+  min-width: 100%;
+  min-height: 100%;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.media-container img {
+  display: block;
+}
